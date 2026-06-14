@@ -21,13 +21,13 @@ Cipher is a post-merger integration intelligence agent that queries both compani
 
 Cipher mirrors the real cross-company structure of a merger using two independent Microsoft Foundry projects across separate Azure tenants:
 
-- **Alpha (acquirer)** - Foundry project with orchestrator agent, Azure OpenAI, Azure AI Search
-- **Beta (target)** - Foundry project with knowledge agent over Beta's documents
+- **Alpha (acquirer)** - Foundry project with orchestrator agent, Azure OpenAI, Azure AI Search [https://ai.azure.com/nextgen/r/lkthAqQnT-eW8hjvHHa4tQ,alpha-rg,,alpha2-foundry,alpha-project/agents/cipher-orchestrator/preview]
+- **Beta (target)** - Foundry project with knowledge agent over Beta's documents [https://ai.azure.com/nextgen/r/K1XVPNoSTIW9QDyXX51f6g,beta-rg,,beta-foundry,beta-project/agents/beta-knowledge-agent/preview?version=12]
 - **Cross-tenant trust** - B2B guest access established between tenants
 
 The Alpha orchestrator synthesizes M&A integration briefs, reasoning across both document sets and returning structured, cited results.
 
-<img width="822" height="612" alt="image" src="https://github.com/user-attachments/assets/41ac15fd-edd6-4c22-aeed-9d3773d15a85" />
+<img width="813" height="590" alt="image" src="https://github.com/user-attachments/assets/45e68012-3585-4810-a18e-f4ce2f77f153" />
 
 <img width="1906" height="937" alt="image" src="https://github.com/user-attachments/assets/661af4f2-7d00-46bb-add1-debd7e74e1b2" />
 
