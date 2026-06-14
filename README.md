@@ -27,6 +27,11 @@ Cipher mirrors the real cross-company structure of a merger using two independen
 
 The Alpha orchestrator synthesizes M&A integration briefs, reasoning across both document sets and returning structured, cited results.
 
+<img width="822" height="612" alt="image" src="https://github.com/user-attachments/assets/41ac15fd-edd6-4c22-aeed-9d3773d15a85" />
+
+<img width="1906" height="937" alt="image" src="https://github.com/user-attachments/assets/661af4f2-7d00-46bb-add1-debd7e74e1b2" />
+
+
 ## Key Features
 
 - **Cross-company reasoning** - queries acquirer and target data in a single synthesis
@@ -53,7 +58,39 @@ Three scenarios:
 
 ## How to Run
 
-[To be completed — judge reproduction steps]
+These steps let a judge reproduce Cipher against the sample documents using the consolidated knowledge base (the demo configuration).
+
+### Prerequisites
+
+- An Azure subscription with access to **Azure AI Foundry**
+- **Azure OpenAI** access with a `gpt-4.1-mini` deployment
+- An **Azure AI Search** resource
+- Permission to create a Foundry project and upload documents
+
+### Steps
+
+1. **Clone the repo**
+```bash
+   git clone https://github.com/pallavising48/cipher-m2a-integration.git
+   cd cipher-m2a-integration
+```
+
+2. **Create a Foundry project** in the Azure AI Foundry portal and deploy a `gpt-4.1-mini` model.
+
+3. **Create an Azure AI Search resource** and connect it to your Foundry project as a knowledge source.
+
+4. **Upload the sample documents.** Load all eight files from `data/sample-documents/` — both the Alpha set and the Beta set (Vendor_Contracts, SLA_Terms, Org_Chart, Financial_Summary for each) — into the same knowledge base. This consolidated KB is what lets the orchestrator reason across both companies.
+
+5. **Create the orchestrator agent.** Add a new agent named `cipher-orchestrator`, paste the system prompt from [`docs/architecture.md`](docs/architecture.md), and attach the knowledge base (and the web search tool, if desired).
+
+6. **Run the three demo queries** and confirm Cipher returns cited, cross-company briefs:
+   - *"What cloud vendor contracts do Alpha and Beta have, and where are there duplicate commitments or expiry risks?"*
+   - *"Who owns Customer Success at Beta, and have they been included in Alpha's integration planning?"*
+   - *"What are the top 3 financial and operational risks in the first 90 days?"*
+
+### Reproducing the two-tenant architecture (optional)
+
+The full cross-tenant design - two separate Foundry projects, two Azure tenants, Microsoft Entra B2B trust, and the `beta-knowledge-agent` - is documented in [`docs/architecture.md`](docs/architecture.md), including the service-to-service calling approaches that were evaluated and why the consolidated KB is used for the demo.
 
 ## Team
 
