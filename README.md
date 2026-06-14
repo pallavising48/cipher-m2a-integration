@@ -41,7 +41,8 @@ The Alpha orchestrator synthesizes M&A integration briefs, reasoning across both
 
 ## Demo
 
-📹 [5-minute demo video](YOUR_YOUTUBE_LINK)
+📹 5-minute demo video
+https://youtu.be/KA9bT1WTiGs
 
 Three scenarios:
 1. Vendor overlap & expiry risk
