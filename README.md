@@ -1,4 +1,4 @@
-# Cipher — Post-Merger Integration Intelligence Agent
+# Cipher - Post-Merger Integration Intelligence Agent
 
 Post-merger integration intelligence agent using Microsoft Foundry
 
